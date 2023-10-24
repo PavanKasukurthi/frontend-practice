@@ -1,0 +1,6 @@
+export { default as Navbar } from './Navbar'
+export { default as ErrorElement } from './ErrorElement'
+export { default as NavLinks } from './NavLinks'
+export { default as TitleHeader } from './TitleHeader'
+export { default as TextComponent } from './TextComponent'
+export { default as Footer } from './Footer'
