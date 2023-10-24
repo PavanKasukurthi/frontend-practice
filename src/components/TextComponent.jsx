@@ -1,6 +1,6 @@
 const TextComponent = ({ topText, belowText, extra }) => {
   return (
-    <div className=" px-64 py-32">
+    <div className="px-10 py-6">
       <header className="text-3xl font-semibold leading-10 tracking-tighter">
         {topText}
       </header>

@@ -1,7 +1,7 @@
 const TitleHeader = ({ src, alt }) => {
   return (
     <div>
-      <img src={src} alt="" />
+      <img src={src} alt={alt} />
     </div>
   )
 }

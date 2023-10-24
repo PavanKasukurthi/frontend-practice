@@ -5,9 +5,9 @@ const HomeLayout = () => {
   return (
     <>
       <Navbar />
-      <section className="px-20">
-        <Outlet />
-      </section>
+
+      <Outlet />
+
       <hr />
       <Footer />
     </>

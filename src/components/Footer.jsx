@@ -2,15 +2,15 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer className="footer  p-32 flex flex-col">
+    <footer className="footer p-16 flex flex-col">
       <h1 className="text-5xl font-semibold">Ableton</h1>
       <main className="">
         {/* COLUMN 1 */}
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-1 lg:grid-cols-3">
           {/* 1 */}
-          <div className="social">
+          <div className="social ">
             {/* ABOUT LINKS */}
-            <ul className="text-lg">
+            <ul className="text-lg  mb-6">
               <li>
                 <Link to="/live">Register Live or Push </Link>
               </li>
@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
 
           {/* 2 */}
-          <div className="">
+          <div className="mb-6">
             <h3 className="text-lg font-bold">Education</h3>
             <ul className="text-lg">
               <li>
@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-3 w-full">
           {/*1*/}
           <div className="community">
             <h3 className="text-lg font-bold mt-6">Community</h3>
@@ -78,7 +78,7 @@ const Footer = () => {
           </div>
 
           {/* 2 */}
-          <div className='col-span-2'>
+          <div className="col-span-2">
             <h3 className="text-lg font-bold mt-6">Language and Location</h3>
           </div>
 

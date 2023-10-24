@@ -19,7 +19,7 @@ const Navbar = () => {
           </svg>
         </Link>
       </div>
-      <div className="navbar-start hidden lg:flex ">
+      <div className="navbar-start hidden lg:flex">
         <NavLinks />
       </div>
 
