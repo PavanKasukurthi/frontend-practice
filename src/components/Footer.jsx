@@ -53,7 +53,7 @@ const Footer = () => {
                 type="email"
                 name="email"
                 id="email"
-                className="w-full px-2 py-4 mt-2 bg-slate-100"
+                className="w-full lg:px-2 py-4 mt-2 bg-slate-100"
                 placeholder="Enter email address"
               />
             </label>

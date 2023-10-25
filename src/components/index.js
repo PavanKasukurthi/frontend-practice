@@ -1,4 +1,5 @@
 export { default as Navbar } from './Navbar'
+export { default as SubNavbar } from './SubNavbar'
 export { default as ErrorElement } from './ErrorElement'
 export { default as NavLinks } from './NavLinks'
 export { default as TitleHeader } from './TitleHeader'

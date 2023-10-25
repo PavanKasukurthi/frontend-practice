@@ -1,9 +1,23 @@
 import { Link } from 'react-router-dom'
-import { Hero, ImageCards, TextComponent } from '../components'
+import { Hero, ImageCards, SubNavbar, TextComponent } from '../components'
+import { useState } from 'react'
+
+const links = [
+  { id: 1, url: 'live', text: 'Live 11' },
+  { id: 2, url: 'all-new-features', text: 'All new features' },
+  { id: 3, url: 'what-is-live', text: 'What is live?' },
+  { id: 4, url: 'max-for-live', text: 'Max for live' },
+  { id: 5, url: 'learn-live', text: 'Learn live' },
+  { id: 6, url: 'integrated-hardware', text: 'Integrated hardware' },
+  { id: 7, url: 'compare-editions', text: 'Compare editions' },
+  { id: 8, url: 'shop/live', text: 'Buy now' },
+]
 
 const Live = () => {
+  const [learnMore, setLearnMore] = useState(false)
   return (
     <>
+    <SubNavbar links={links} />
       <Hero heading={`What's new in Live 11`} />
 
       {/* OFFER */}
@@ -131,34 +145,40 @@ const Live = () => {
 
       {/* LEARN MORE */}
       <section className="learn-more">
-        <button className="text-blue-900 bg-none border-2 border-blue-900 w-11/12 flex justify-center items-center mx-auto py-4 font-bold mb-10">
-          + Learn more
+        <button
+          onClick={() => setLearnMore(!learnMore)}
+          className="text-blue-900 bg-none border-2 border-blue-900 w-11/12 flex justify-center items-center mx-auto py-4 font-bold mb-10"
+        >
+          {learnMore ? '- Show Less' : '+ Learn More'}
         </button>
-        <div className="grid grid-cols-1 md:grid-cols-2 mx-auto hidden">
-          <div>
-            <img
-              src="https://ableton-production.imgix.net/live/screenshot-note-expression-view.jpg?auto=compress%2Cformat&w=768"
-              alt="Note Expression View"
-              className=" px-10 "
-            />
-            <TextComponent
-              topText="Note Expression View"
-              belowText="Edit the pitch, slide and pressure envelopes of each note to refine the expression of your takes. Or take your sound design further by sequencing polyphonic sound variations."
-            />
-          </div>
 
-          <div>
-            <img
-              src="https://ableton-production.imgix.net/live/screenshot-expressive-sounds.jpg?auto=compress%2Cformat&w=768"
-              alt="More expressive sounds included"
-              className=" px-10"
-            />
-            <TextComponent
-              topText="More expressive sounds included"
-              belowText="Wavetable, Sampler and Arpeggiator are all updated to support MPE. And Live comes with MPE presets for each device that bring new dimensions of interaction and playability to your sound. The new expressive possibilities also enable polyphonic aftertouch on Push."
-            />
+        {learnMore && (
+          <div className="grid grid-cols-1 md:grid-cols-2 mx-auto ">
+            <div>
+              <img
+                src="https://ableton-production.imgix.net/live/screenshot-note-expression-view.jpg?auto=compress%2Cformat&w=768"
+                alt="Note Expression View"
+                className=" px-10 "
+              />
+              <TextComponent
+                topText="Note Expression View"
+                belowText="Edit the pitch, slide and pressure envelopes of each note to refine the expression of your takes. Or take your sound design further by sequencing polyphonic sound variations."
+              />
+            </div>
+
+            <div>
+              <img
+                src="https://ableton-production.imgix.net/live/screenshot-expressive-sounds.jpg?auto=compress%2Cformat&w=768"
+                alt="More expressive sounds included"
+                className=" px-10"
+              />
+              <TextComponent
+                topText="More expressive sounds included"
+                belowText="Wavetable, Sampler and Arpeggiator are all updated to support MPE. And Live comes with MPE presets for each device that bring new dimensions of interaction and playability to your sound. The new expressive possibilities also enable polyphonic aftertouch on Push."
+              />
+            </div>
           </div>
-        </div>
+        )}
       </section>
     </>
   )

@@ -3,7 +3,7 @@ import NavLinks from './NavLinks'
 
 const Navbar = () => {
   return (
-    <nav className="navbar px-4 shadow-md">
+    <nav className="navbar px-4 border-b-2 z-20">
       <div className="navbar-start gap-x-4 " style={{ width: '3rem' }}>
         <Link to="/">
           <svg

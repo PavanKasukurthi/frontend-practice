@@ -19,7 +19,10 @@ const NavLinks = () => {
 
         return (
           <li key={id}>
-            <NavLink className="capitalize lg:ml-5 font-semibold" to={url}>
+            <NavLink
+              className="capitalize lg:ml-5 font-semibold focus:text-orange-400 active:text-orange-400"
+              to={url}
+            >
               {text}
             </NavLink>
           </li>
